@@ -1,0 +1,79 @@
+@model BookListViewModel
+@{
+    ViewData["Title"] = "Danh sách sách";
+    string NextSort(string column) => Model.Sort == column ? column + "_desc" : column;
+    string SortMark(string column) => Model.Sort == column ? " ↑" : Model.Sort == column + "_desc" ? " ↓" : "";
+}
+
+<div class="page-heading">
+    <div><p class="eyebrow">THƯ VIỆN</p><h1>Danh sách sách</h1></div>
+    <a class="button" asp-action="Create">Thêm sách</a>
+</div>
+
+<form asp-action="Index" method="get" class="search-form">
+    <label for="term">Tìm sách</label>
+    <input id="term" name="term" value="@Model.Term" placeholder="Tên sách, tác giả, nhà xuất bản, năm..." />
+    <input type="hidden" name="sort" value="@Model.Sort" />
+    <input type="hidden" name="pageNumber" value="1" />
+    <button type="submit">Tìm kiếm</button>
+    <a class="button secondary" asp-action="Index">Tất cả</a>
+</form>
+
+<p class="muted">Tìm thấy <strong>@Model.TotalItems</strong> sách. Bấm tiêu đề cột để đổi thứ tự sắp xếp.</p>
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th scope="col"><a asp-action="Index" asp-route-term="@Model.Term" asp-route-sort="@NextSort("name")" asp-route-pageNumber="1">Tên sách@(SortMark("name"))</a></th>
+                <th scope="col"><a asp-action="Index" asp-route-term="@Model.Term" asp-route-sort="@NextSort("authors")" asp-route-pageNumber="1">Tác giả@(SortMark("authors"))</a></th>
+                <th scope="col"><a asp-action="Index" asp-route-term="@Model.Term" asp-route-sort="@NextSort("publisher")" asp-route-pageNumber="1">Nhà xuất bản@(SortMark("publisher"))</a></th>
+                <th scope="col"><a asp-action="Index" asp-route-term="@Model.Term" asp-route-sort="@NextSort("year")" asp-route-pageNumber="1">Năm@(SortMark("year"))</a></th>
+                <th scope="col">Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.Books.Count == 0)
+            {
+                <tr><td colspan="5" class="empty-state">Không tìm thấy sách phù hợp.</td></tr>
+            }
+            @foreach (var book in Model.Books)
+            {
+                <tr>
+                    <td><a asp-action="Details" asp-route-id="@book.Id">@book.Name</a></td>
+                    <td>@book.Authors</td><td>@book.Publisher</td><td>@book.Year</td>
+                    <td>
+                        <div class="row-actions">
+                            <a asp-action="Edit" asp-route-id="@book.Id">Sửa</a>
+                            <a class="danger-link" asp-action="Delete" asp-route-id="@book.Id">Xóa</a>
+                            @if (!string.IsNullOrWhiteSpace(book.DataFile))
+                            {
+                                <a asp-action="Read" asp-route-id="@book.Id">Tải PDF</a>
+                            }
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div class="pagination">
+    <p>Trang <strong>@Model.PageNumber</strong> / @Model.TotalPages · Hiển thị @Model.Books.Count sách</p>
+    <form asp-action="Index" method="get" class="page-form">
+        <input type="hidden" name="term" value="@Model.Term" />
+        <input type="hidden" name="sort" value="@Model.Sort" />
+        <label for="pageNumber">Đến trang</label>
+        <input type="number" id="pageNumber" name="pageNumber" value="@Model.PageNumber" min="1" max="@Model.TotalPages" required />
+        <button type="submit">Đi</button>
+    </form>
+    <div class="row-actions">
+        @if (Model.PageNumber > 1)
+        {
+            <a asp-action="Index" asp-route-term="@Model.Term" asp-route-sort="@Model.Sort" asp-route-pageNumber="@(Model.PageNumber - 1)">Trang trước</a>
+        }
+        @if (Model.PageNumber < Model.TotalPages)
+        {
+            <a asp-action="Index" asp-route-term="@Model.Term" asp-route-sort="@Model.Sort" asp-route-pageNumber="@(Model.PageNumber + 1)">Trang sau</a>
+        }
+    </div>
+</div>

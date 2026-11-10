@@ -1,0 +1,14 @@
+@model Book
+@{
+    ViewData["Title"] = "Xóa sách";
+}
+<h1>Xóa sách</h1>
+<p>Bạn có muốn xóa sách <strong>@Model.Name</strong> của <strong>@Model.Authors</strong>?</p>
+<form asp-action="Delete" asp-route-id="@Model.Id" method="post">
+    <div asp-validation-summary="All" class="validation-errors" role="alert"></div>
+    <input type="hidden" asp-for="Id" />
+    <div class="form-actions">
+        <button type="submit" class="danger">Xác nhận xóa</button>
+        <a class="button secondary" asp-action="Index">Hủy</a>
+    </div>
+</form>

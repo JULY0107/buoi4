@@ -1,0 +1,13 @@
+@model Book
+@{
+    ViewData["Title"] = "Sửa sách";
+}
+<h1>Sửa sách</h1>
+<form asp-action="Edit" asp-route-id="@Model.Id" method="post" enctype="multipart/form-data" class="editor">
+    <input type="hidden" asp-for="Id" />
+    <partial name="_Form" model="Model" />
+    <div class="form-actions">
+        <button type="submit">Lưu thay đổi</button>
+        <a class="button secondary" asp-action="Index">Về danh sách</a>
+    </div>
+</form>

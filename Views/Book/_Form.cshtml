@@ -1,0 +1,36 @@
+@model Book
+<div asp-validation-summary="All" class="validation-errors" role="alert"></div>
+<div class="field">
+    <label asp-for="Name">Tên sách</label>
+    <input asp-for="Name" />
+    <span asp-validation-for="Name"></span>
+</div>
+<div class="field">
+    <label asp-for="Authors">Tác giả</label>
+    <input asp-for="Authors" />
+    <span asp-validation-for="Authors"></span>
+</div>
+<div class="field">
+    <label asp-for="Publisher">Nhà xuất bản</label>
+    <input asp-for="Publisher" />
+    <span asp-validation-for="Publisher"></span>
+</div>
+<div class="field">
+    <label asp-for="Year">Năm xuất bản</label>
+    <input asp-for="Year" />
+    <span asp-validation-for="Year"></span>
+</div>
+<div class="field">
+    <label asp-for="Description">Mô tả</label>
+    <textarea asp-for="Description" rows="4"></textarea>
+    <span asp-validation-for="Description"></span>
+</div>
+<div class="field">
+    <label for="file">File sách PDF</label>
+    <input type="file" id="file" name="file" accept=".pdf" aria-describedby="file-help" />
+    <p id="file-help" class="muted">PDF tối đa 10 MB. Có thể để trống; khi sửa sách, file cũ sẽ được giữ lại.</p>
+    @if (!string.IsNullOrWhiteSpace(Model.DataFile))
+    {
+        <a asp-action="Read" asp-route-id="@Model.Id">Tải PDF hiện tại</a>
+    }
+</div>

@@ -1,0 +1,110 @@
+[
+  {
+    "Id": 1,
+    "Name": "S\u00E1ch th\u1EF1c h\u00E0nh 01",
+    "Authors": "T\u00E1c gi\u1EA3 m\u1EABu 1",
+    "Publisher": "Nh\u00E0 xu\u1EA5t b\u1EA3n m\u1EABu 1",
+    "Year": 2020,
+    "Description": "D\u1EEF li\u1EC7u minh h\u1ECDa c\u1EE7a b\u00E0i th\u1EF1c h\u00E0nh.",
+    "DataFile": null
+  },
+  {
+    "Id": 2,
+    "Name": "S\u00E1ch th\u1EF1c h\u00E0nh 02",
+    "Authors": "T\u00E1c gi\u1EA3 m\u1EABu 2",
+    "Publisher": "Nh\u00E0 xu\u1EA5t b\u1EA3n m\u1EABu 2",
+    "Year": 2021,
+    "Description": "D\u1EEF li\u1EC7u minh h\u1ECDa c\u1EE7a b\u00E0i th\u1EF1c h\u00E0nh.",
+    "DataFile": null
+  },
+  {
+    "Id": 3,
+    "Name": "S\u00E1ch th\u1EF1c h\u00E0nh 03",
+    "Authors": "T\u00E1c gi\u1EA3 m\u1EABu 3",
+    "Publisher": "Nh\u00E0 xu\u1EA5t b\u1EA3n m\u1EABu 1",
+    "Year": 2022,
+    "Description": "D\u1EEF li\u1EC7u minh h\u1ECDa c\u1EE7a b\u00E0i th\u1EF1c h\u00E0nh.",
+    "DataFile": null
+  },
+  {
+    "Id": 4,
+    "Name": "S\u00E1ch th\u1EF1c h\u00E0nh 04",
+    "Authors": "T\u00E1c gi\u1EA3 m\u1EABu 1",
+    "Publisher": "Nh\u00E0 xu\u1EA5t b\u1EA3n m\u1EABu 2",
+    "Year": 2023,
+    "Description": "D\u1EEF li\u1EC7u minh h\u1ECDa c\u1EE7a b\u00E0i th\u1EF1c h\u00E0nh.",
+    "DataFile": null
+  },
+  {
+    "Id": 5,
+    "Name": "S\u00E1ch th\u1EF1c h\u00E0nh 05",
+    "Authors": "T\u00E1c gi\u1EA3 m\u1EABu 2",
+    "Publisher": "Nh\u00E0 xu\u1EA5t b\u1EA3n m\u1EABu 1",
+    "Year": 2024,
+    "Description": "D\u1EEF li\u1EC7u minh h\u1ECDa c\u1EE7a b\u00E0i th\u1EF1c h\u00E0nh.",
+    "DataFile": null
+  },
+  {
+    "Id": 6,
+    "Name": "S\u00E1ch th\u1EF1c h\u00E0nh 06",
+    "Authors": "T\u00E1c gi\u1EA3 m\u1EABu 3",
+    "Publisher": "Nh\u00E0 xu\u1EA5t b\u1EA3n m\u1EABu 2",
+    "Year": 2025,
+    "Description": "D\u1EEF li\u1EC7u minh h\u1ECDa c\u1EE7a b\u00E0i th\u1EF1c h\u00E0nh.",
+    "DataFile": null
+  },
+  {
+    "Id": 7,
+    "Name": "S\u00E1ch th\u1EF1c h\u00E0nh 07",
+    "Authors": "T\u00E1c gi\u1EA3 m\u1EABu 1",
+    "Publisher": "Nh\u00E0 xu\u1EA5t b\u1EA3n m\u1EABu 1",
+    "Year": 2020,
+    "Description": "D\u1EEF li\u1EC7u minh h\u1ECDa c\u1EE7a b\u00E0i th\u1EF1c h\u00E0nh.",
+    "DataFile": null
+  },
+  {
+    "Id": 8,
+    "Name": "S\u00E1ch th\u1EF1c h\u00E0nh 08",
+    "Authors": "T\u00E1c gi\u1EA3 m\u1EABu 2",
+    "Publisher": "Nh\u00E0 xu\u1EA5t b\u1EA3n m\u1EABu 2",
+    "Year": 2021,
+    "Description": "D\u1EEF li\u1EC7u minh h\u1ECDa c\u1EE7a b\u00E0i th\u1EF1c h\u00E0nh.",
+    "DataFile": null
+  },
+  {
+    "Id": 9,
+    "Name": "S\u00E1ch th\u1EF1c h\u00E0nh 09",
+    "Authors": "T\u00E1c gi\u1EA3 m\u1EABu 3",
+    "Publisher": "Nh\u00E0 xu\u1EA5t b\u1EA3n m\u1EABu 1",
+    "Year": 2022,
+    "Description": "D\u1EEF li\u1EC7u minh h\u1ECDa c\u1EE7a b\u00E0i th\u1EF1c h\u00E0nh.",
+    "DataFile": null
+  },
+  {
+    "Id": 10,
+    "Name": "S\u00E1ch th\u1EF1c h\u00E0nh 10",
+    "Authors": "T\u00E1c gi\u1EA3 m\u1EABu 1",
+    "Publisher": "Nh\u00E0 xu\u1EA5t b\u1EA3n m\u1EABu 2",
+    "Year": 2023,
+    "Description": "D\u1EEF li\u1EC7u minh h\u1ECDa c\u1EE7a b\u00E0i th\u1EF1c h\u00E0nh.",
+    "DataFile": null
+  },
+  {
+    "Id": 11,
+    "Name": "S\u00E1ch th\u1EF1c h\u00E0nh 11",
+    "Authors": "T\u00E1c gi\u1EA3 m\u1EABu 2",
+    "Publisher": "Nh\u00E0 xu\u1EA5t b\u1EA3n m\u1EABu 1",
+    "Year": 2024,
+    "Description": "D\u1EEF li\u1EC7u minh h\u1ECDa c\u1EE7a b\u00E0i th\u1EF1c h\u00E0nh.",
+    "DataFile": null
+  },
+  {
+    "Id": 12,
+    "Name": "S\u00E1ch th\u1EF1c h\u00E0nh 12",
+    "Authors": "T\u00E1c gi\u1EA3 m\u1EABu 3",
+    "Publisher": "Nh\u00E0 xu\u1EA5t b\u1EA3n m\u1EABu 2",
+    "Year": 2025,
+    "Description": "D\u1EEF li\u1EC7u minh h\u1ECDa c\u1EE7a b\u00E0i th\u1EF1c h\u00E0nh.",
+    "DataFile": null
+  }
+]

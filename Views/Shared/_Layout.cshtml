@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"] - Quản lý sách</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="site-header">
+        <nav class="container" aria-label="Điều hướng chính">
+            <a class="brand" asp-controller="Book" asp-action="Index">Quản lý sách</a>
+            <a asp-controller="Book" asp-action="Create">Thêm sách</a>
+        </nav>
+    </header>
+    <main class="container content">
+        @if (TempData["Message"] is string message)
+        {
+            <div class="notice" role="status">@message</div>
+        }
+        @RenderBody()
+    </main>
+    <footer class="container footer">Thực hành ASP.NET Core MVC</footer>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

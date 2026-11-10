@@ -1,0 +1,28 @@
+@model Book
+@{
+    ViewData["Title"] = "Chi tiết sách";
+}
+<p class="eyebrow">CHI TIẾT SÁCH</p>
+<h1>@Model.Name</h1>
+<dl class="details">
+    <dt>Mã sách</dt><dd>@Model.Id</dd>
+    <dt>Tác giả</dt><dd>@Model.Authors</dd>
+    <dt>Nhà xuất bản</dt><dd>@Model.Publisher</dd>
+    <dt>Năm xuất bản</dt><dd>@Model.Year</dd>
+    <dt>Mô tả</dt><dd class="description">@(string.IsNullOrWhiteSpace(Model.Description) ? "Chưa có mô tả." : Model.Description)</dd>
+    <dt>File PDF</dt>
+    <dd>
+        @if (!string.IsNullOrWhiteSpace(Model.DataFile))
+        {
+            <a asp-action="Read" asp-route-id="@Model.Id">Tải PDF</a>
+        }
+        else
+        {
+            <span class="muted">Chưa có file đính kèm.</span>
+        }
+    </dd>
+</dl>
+<div class="form-actions">
+    <a class="button" asp-action="Edit" asp-route-id="@Model.Id">Sửa sách</a>
+    <a class="button secondary" asp-action="Index">Về danh sách</a>
+</div>
